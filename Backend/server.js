@@ -9,9 +9,14 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
+
+// CORS Configuration
 app.use(
   cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: [
+      "https://form-peach-eta.vercel.app",
+      "https://form-fffw.vercel.app",
+    ], // Add both frontend URLs here
     methods: ["POST", "GET"],
     credentials: true,
   })
