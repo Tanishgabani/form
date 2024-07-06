@@ -26,7 +26,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "form-fffw.vercel.app/api/user/create-user",
+        "https://form-fffw.vercel.app/api/user/create-user",
         formData
       );
       setMessage(response.data.message);
