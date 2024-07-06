@@ -26,7 +26,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://form-eta-seven.vercel.app/api/user/create-user",
+        "https://form-two-psi.vercel.app/api/user/create-user",
         formData
       );
       setMessage(response.data.message);
