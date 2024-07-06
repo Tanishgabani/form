@@ -12,6 +12,10 @@ app.use(express.json());
 // DB Connection
 connectDB();
 
+app.get("/home", (req, res) => {
+  res.send("This is home page");
+});
+
 // Routes
 import userRoute from "./Route/user.route.js";
 
