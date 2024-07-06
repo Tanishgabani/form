@@ -11,13 +11,7 @@ dotenv.config();
 app.use(express.json());
 
 // CORS Configuration
-app.use(
-  cors({
-    origin: ["https://form-n5vx.vercel.app"],
-    methods: ["POST", "GET", "OPTIONS"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.options("*", cors());
 
