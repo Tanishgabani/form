@@ -13,10 +13,7 @@ app.use(express.json());
 // CORS Configuration
 app.use(
   cors({
-    origin: [
-      "https://form-peach-eta.vercel.app",
-      "https://form-fffw.vercel.app",
-    ],
+    origin: ["https://form-n5vx.vercel.app"],
     methods: ["POST", "GET", "OPTIONS"],
     credentials: true,
   })
