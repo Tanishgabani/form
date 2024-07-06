@@ -16,11 +16,13 @@ app.use(
     origin: [
       "https://form-peach-eta.vercel.app",
       "https://form-fffw.vercel.app",
-    ], // Add both frontend URLs here
-    methods: ["POST", "GET"],
+    ],
+    methods: ["POST", "GET", "OPTIONS"],
     credentials: true,
   })
 );
+
+app.options("*", cors());
 
 // DB Connection
 connectDB();
