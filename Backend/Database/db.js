@@ -1,13 +1,20 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+
+  mongoose.set("strictQuery", false);
   try {
-    const dbConnection = await mongoose.connect(
-      "mongodb://localhost:27017/user"
-    );
-    console.log("Database connected successfully !!");
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("MongoDB connected");
   } catch (error) {
-    console.log("Something went wrong to connect with database : ", error);
+    console.error("MongoDB connection error:", error);
+    process.exit(1);
   }
 };
 
