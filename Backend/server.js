@@ -11,7 +11,8 @@ dotenv.config();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: "https://form-peach-eta.vercel.app",
+    optionsSuccessStatus: 200,
     methods: ["POST", "GET"],
     credentials: true,
   })
