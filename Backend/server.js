@@ -10,16 +10,16 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 
-// CORS Configuration
-app.use(
-  cors({
-    origin: ["https://form-87ig.vercel.app/"],
-    methods: ["POST", "GET", "OPTIONS"],
-    credentials: true,
-  })
-);
+// // CORS Configuration
+// app.use(
+//   cors({
+//     origin: ["https://form-87ig.vercel.app/"],
+//     methods: ["POST", "GET", "OPTIONS"],
+//     credentials: true,
+//   })
+// );
 
-app.options("*", cors());
+// app.options("*", cors());
 
 // DB Connection
 connectDB();
