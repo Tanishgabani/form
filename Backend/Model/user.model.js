@@ -11,19 +11,7 @@ const userSchema = new Schema(
       required: true,
       unique: true,
     },
-    contectNo: {
-      type: String,
-      required: true,
-    },
-    city: {
-      type: String,
-      required: true,
-    },
     business: {
-      type: String,
-      required: true,
-    },
-    website: {
       type: String,
       required: true,
     },

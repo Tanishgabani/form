@@ -5,8 +5,8 @@ import { ApiResponse } from "../Utils/ApiResponse.js";
 const userController = async (req, res) => {
   try {
     // Validation
-    const { name, email, contectNo, city, business, website } = req.body;
-    if (!name || !email || !contectNo || !city || !business || !website) {
+    const { name, email, business } = req.body;
+    if (!name || !email || !business) {
       throw new ApiError(404, "All fields are required.");
     }
 
@@ -14,10 +14,7 @@ const userController = async (req, res) => {
     const user = await User.create({
       name,
       email,
-      contectNo,
-      city,
       business,
-      website,
     });
 
     if (!user) {
